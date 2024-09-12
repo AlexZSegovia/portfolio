@@ -1,0 +1,305 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+    overflow:auto; /* Evita barras de desplazamiento innecesarias */
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./img/espacio_2560x1440_xtrafondos.com.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda el área del fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen en su lugar cuando se desplaza el contenido */
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Color de fondo semi-transparente */
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; 
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    max-height: 100px; /* Ajusta el tamaño máximo del logo */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+.header-right .fa-shopping-cart {
+    font-size: 1.5rem; /* Tamaño del ícono */
+}
+
+main {
+    padding: 2rem;
+}
+
+.productos {
+    text-align: center;
+    margin-bottom: 2rem; /* Espacio debajo del título */
+    color:#321b86;
+    font-weight:bold;
+    
+}
+
+.productos h1 {
+    font-size: 2rem; /* Tamaño del título */
+    margin: 0; /* Eliminar márgenes para mejor alineación */
+    color:#e7e6e9
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Centra los elementos en la fila */
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 250px; /* Establece un ancho mínimo para cada ítem */
+    max-width: 250px; /* Define el ancho máximo para mantener el tamaño uniforme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    margin: 0.5rem 0;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #666060;
+}
+
+.btn-add-to-cart {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        padding: 1px;
+    }
+    .header-left h1{
+        margin:1rem 1px 1px 1px;
+    }
+    .header-center {
+        position: static; /* Resetea la posición para móviles */
+        transform: none;
+        margin: 1px 1px; /* Espacio entre el título y el logo */
+    }
+
+    .header-right {
+        font-size:large;
+        margin-top: 1rem;
+        width: 100%; /* Asegura que la navegación ocupe todo el ancho */
+        justify-content: center; /* Alinea la navegación al centro en pantallas pequeñas */
+        margin: 1px;
+    }
+
+    .header-right a {
+        display: block;
+        margin: 1rem 1%;
+    }
+
+    .productos-container {
+        flex-direction: column;
+        align-items: center; /* Centra los productos en pantallas pequeñas */
+    }
+
+    .producto {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+html, body {
+    height: 100%; /* Asegura que el html y body ocupen el 100% del alto */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Hace que el main ocupe todo el espacio disponible entre header y footer */
+    padding: 2rem;
+}
+
+/* Estilos para el footer */
+footer {
+    background: linear-gradient(to right, rgba(51, 51, 51, 0.2) 20%, rgba(51, 51, 51, 1) 90%);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    flex-wrap: wrap;
+    width: 98%;
+}
+
+/* Contenedor del botón y la frase */
+footer .button-frase-container {
+    display: flex;
+    flex-direction: column; /* Coloca el botón y la frase en columna */
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+    gap: 1rem; /* Espacio entre el botón y la frase */
+    flex: 1; /* Toma el espacio disponible */
+}
+
+/* Estilos para el botón dentro del footer */
+footer button {
+    background-color: #8a2be2; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 0.5rem 1rem; /* Espaciado interno del botón */
+    font-size: 1rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+footer button:hover {
+    background-color: #6c1d9e; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Estilos para el párrafo de la frase dentro del footer */
+footer #frase {
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    font-style: italic; /* Estilo en cursiva */
+    color: #fff; /* Color del texto */
+    max-width: 600px; /* Ancho máximo del párrafo */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Contenedor del contenido de contacto y del mapa */
+.contacto-content {
+    display: flex;
+    justify-content: space-between; /* Alinea los divs uno al lado del otro */
+    flex: 1; /* Toma el espacio disponible */
+    width: 100%;
+}
+
+/* Alineación del contenido de contacto */
+.contacto-info {
+    text-align: right; /* Centra el texto del contenido de contacto */
+    margin-right: 2rem; /* Espacio a la derecha entre el contenido de contacto y el minimapa */
+    flex: 1; /* Toma el espacio disponible */
+}
+
+/* Estilo adicional para el contenedor del mapa */
+.google-maps {
+    display: flex;
+    justify-content: center;
+    width: 300px; /* Ajusta el ancho del contenedor del minimapa */
+}
+
+.google-maps iframe {
+    width: 100%;
+    height: 160px; /* Ajusta la altura del minimapa */
+    border: 0;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-info {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Espacio debajo del contenido de contacto en pantallas pequeñas */
+    }
+
+    .google-maps {
+        width: 100%;
+    }
+
+    .button-frase-container {
+        align-items: center; /* Centra el botón y la frase en pantallas pequeñas */
+    }
+}
+
+/* Estilos para los enlaces en el contenido de contacto */
+.contacto-info a {
+    color: #fff; /* Color blanco para el texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.contacto-info a:hover {
+    color: #8a2be2; /* Color violeta para el texto al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+.contacto ul {
+    list-style: none; /* Quita los puntos de la lista */
+    
+}
+

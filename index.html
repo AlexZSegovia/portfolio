@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aldebaran Cuadros 3D</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap"
+        rel="stylesheet"
+    />
+    <script src="./index.js" ></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Aldebaran Cuadros 3D</h1>
+        </div>
+        <div class="header-center">
+            <a href="index.html"> 
+                <img
+                    src="./img/d4ddfaf59096eb89e227ca170ab81589.jpg"
+                    alt="Logo"
+                    class="logo"
+                />
+            </a>
+        </div>
+        <nav class="header-right">
+            <a href="index.html">Home</a>
+            <a href="#">Productos</a>
+            <a href="#">Nosotros</a>
+            <a href="formulario.html">Contacto</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="productos">
+            <h1>Productos Destacados</h1>
+            <div class="productos-container">
+                <div class="producto">
+                    <img
+                        src="./img/20210102_131955-scaled-e1629556609823.jpg"
+                        alt="Cuadro 1"
+                    />
+                    <h2>Cuadro Leon</h2>
+                    <p>Descripción del cuadro .</p>
+                    <button class="btn-add-to-cart">Agregar a carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="./img/cuadro-papel-luz-3d-capas-154.jpg" alt="Cuadro 2" />
+                    <h2>Cuadro papel de luz</h2>
+                    <p>Descripción del cuadro .</p>
+                    <button class="btn-add-to-cart">Agregar a carrito</button>
+                </div>
+                <div class="producto">
+                    <img
+                        src="./img/cuadro_3d_gallo_16x20_1_marupa1-04c28ea030af8bf82216834814959543-1024-1024.jpg"
+                        alt="Cuadro 3"
+                    />
+                    <h2>Cuadro de gallo</h2>
+                    <p>Descripción del cuadro .</p>
+                    <button class="btn-add-to-cart">Agregar a carrito</button>
+                </div>
+                <div class="producto">
+                    <img
+                        src="./img/cuadro_3d_magodeoz_23x28_11-684a1c873504d37e5e16834816600081-1024-1024.webp"
+                        alt="Cuadro 4"
+                    />
+                    <h2>Cuadro mago de oz</h2>
+                    <p>Descripción del cuadro .</p>
+                    <button class="btn-add-to-cart">Agregar a carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contacto">
+      <div class="button-frase-container">
+          <button id="btn-generar">Generar Frase</button>
+          <p id="frase"></p>
+      </div>
+      <div class="contacto-content">
+          <div class="contacto-info">
+              <h1>Contacto</h1>
+              <ul>
+                  <li>Teléfono: +123 456 789</li>
+                  <li>Mail: contacto@aldebarancuadros.com</li>
+                  <li>Dirección: Calle 123, 456, NewYork , EEUU</li>
+                  <li>
+                      <a href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="google-maps">
+              <iframe src="https://www.google.com/maps/embed?pb=..." frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div>
+    </footer>
+    <script src="./frase.js" ></script>
+
+</body>
+</html>
